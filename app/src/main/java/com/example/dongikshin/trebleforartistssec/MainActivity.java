@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity  {
     //UI start
     public void onMenuClick(View v) {
         layout.setVisibility(View.VISIBLE);
-        layout3.setVisibility(View.GONE);
+        layout3.setVisibility(View.GONE);;
 
     }
 
