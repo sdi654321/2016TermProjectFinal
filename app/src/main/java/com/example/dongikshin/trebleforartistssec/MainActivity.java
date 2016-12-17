@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity  {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        googleMap.setMyLocationEnabled(true);
+        googleMap.setMyLocationEnabled(true);;
 
     }
 
