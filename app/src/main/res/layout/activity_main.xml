@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dongikshin.trebleforartists.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/Layout_menu"
+        android:layout_width="150dp"
+        android:background="#b5d7f5"
+        android:layout_height="395dp"
+        android:layout_above="@+id/button_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:text="핫한 라이브!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonhotlive"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:onClick="onHotliveClick" />
+
+        <Button
+            android:text="금주의 레코드"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_record"
+            android:layout_below="@+id/buttonhotlive"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:onClick="onRecordClick" />
+
+        <Button
+            android:text="트래블 뉴스"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_news"
+            android:layout_below="@+id/button_record"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:onClick="onNewsClick" />
+
+        <Button
+            android:text="스타 차트"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_starchart"
+            android:layout_below="@+id/button_news"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:onClick="onStarChartClick" />
+
+        <Button
+            android:text="스트리트 차트"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_streetchart"
+            android:layout_below="@+id/button_starchart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="visible"
+            android:onClick="onStreetChartClick" />
+
+        <Button
+            android:text="음악 강의"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_streetchart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/button_class"
+            android:visibility="visible"
+            android:onClick="onClassClick" />
+
+        <Button
+            android:text="아티스트 페이지"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_class"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/button_artist"
+            android:visibility="visible"
+            android:onClick="onArtistClick" />
+
+        <Button
+            android:text="히스토리"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_history"
+            android:onClick="onHistoryClick" />
+
+        <Button
+            android:text="About Treble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_artist"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/button_abouttreble"
+            android:visibility="visible"
+            android:onClick="onAboutTrebleClick" />
+
+        <Button
+            android:text="Setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_schedule"
+            android:layout_alignLeft="@+id/button_schedule"
+            android:layout_alignStart="@+id/button_schedule"
+            android:id="@+id/button_setting"
+            android:onClick="onSettingClick" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="395dp"
+        android:id="@+id/Layout_SNS"
+        android:visibility="gone"
+        android:weightSum="1"
+        android:layout_above="@+id/button_home"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="11dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:id="@+id/Layout_Mates"
+            android:background="#163a82"
+            android:layout_width="100dp"
+            android:layout_weight="0.55"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:id="@+id/Layout_Artists"
+            android:layout_width="100dp"
+            android:background="#4a47f0"
+            android:layout_weight="0.50"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:id="@+id/Layout_video">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_height="150dp"
+            android:layout_above="@+id/button_home"
+            android:layout_toRightOf="@+id/button_menu"
+            android:layout_toEndOf="@+id/button_menu"
+            android:layout_marginBottom="33dp"
+            android:layout_width="match_parent" />
+
+        <VideoView
+            android:id="@+id/videoView2"
+            android:layout_height="150dp"
+            android:layout_above="@+id/button_home"
+            android:layout_toRightOf="@+id/button_menu"
+            android:layout_toEndOf="@+id/button_menu"
+            android:layout_marginBottom="33dp"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="팀 소개글을 남겨주세요."
+        android:layout_width="400dp"
+        android:layout_above="@+id/button_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp"
+        android:id="@+id/textView"
+        android:layout_toStartOf="@+id/button_right"
+        android:visibility="gone"
+        android:layout_height="70dp"
+        android:layout_toLeftOf="@+id/button_right" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_above="@+id/button_home"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/Layout_artistsonly"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_upload"
+            android:background="@drawable/uploadbuttun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/button_right"
+            android:layout_toLeftOf="@+id/buttonhotlive"
+            android:layout_toStartOf="@+id/buttonhotlive"
+            android:layout_weight="1"
+            android:onClick="onUploadClick" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/buttonlive"
+            android:background="@drawable/livebuttun"
+            android:layout_above="@+id/button_home"
+            android:layout_toLeftOf="@+id/button_home"
+            android:layout_toStartOf="@+id/button_home"
+            android:layout_weight="1"
+            android:onClick="onLiveClick" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_schedule"
+            android:background="@drawable/calender"
+            android:layout_above="@+id/button_home"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:onClick="onScheduleClick" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_height="60dp"
+        android:id="@+id/button_menu"
+        android:onClick="onMenuClick"
+        android:textSize="5sp"
+        android:layout_width="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/menu_ket"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_height="60dp"
+        android:id="@+id/button_left"
+        android:textSize="5sp"
+        android:layout_width="60dp"
+        android:background="@android:drawable/ic_media_rew"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_menu"
+        android:layout_toEndOf="@+id/button_menu"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:onClick="onLeftClick"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_right"
+        android:textSize="5sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_left"
+        android:layout_toEndOf="@+id/button_left"
+        android:background="@android:drawable/ic_media_ff"
+        android:onClick="onRightClick"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_height="60dp"
+        android:id="@+id/button_mate"
+        android:onClick="onMateClick"
+        android:textSize="5sp"
+        android:layout_width="49dp"
+        android:background="@drawable/humangray"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_right"
+        android:layout_toEndOf="@+id/button_right" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_home"
+        android:textSize="5sp"
+        android:layout_weight="1"
+        android:layout_alignBottom="@+id/button_menu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button_left"
+        android:background="@drawable/homebutton"
+        android:onClick="onHomeClick" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_schedule"
+        android:visibility="gone">
+
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/calendarView1"
+            android:visibility="visible"
+            />
+
+
+        <Button
+            android:text="일정 등록"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="92dp"
+            android:id="@+id/Sadd"
+            android:onClick="onAddClick" />
+
+        <Button
+            android:text="일정 취소"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Scancel"
+            android:onClick="onCancelClick"
+            android:layout_alignBottom="@+id/Sadd"
+            android:layout_toRightOf="@+id/Sadd"
+            android:layout_toEndOf="@+id/Sadd" />
+
+        <Button
+            android:text="설정 완료"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Completed"
+            android:onClick="onComSetClick"
+            android:layout_toRightOf="@+id/Scancel"
+            android:layout_toEndOf="@+id/Scancel"
+            android:layout_alignBottom="@+id/Scancel" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
